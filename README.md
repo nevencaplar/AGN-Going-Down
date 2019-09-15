@@ -6,7 +6,7 @@ This repository contains all of the data and code needed to reproduce conclusion
 
 ## Contents of the repository:
 
-* Folder `Data`: contains all the data needed to reproduce the result. This included different AGN catalogs, filter curves and outputs from SQL queries.
+* Folder `Data`: contains all the data needed to reproduce the result. This included different AGN catalogs, filter curves and outputs from SQL queries. The only data missing is the catalog of non-variable stars from Stripe 82 - instructions are provided on how to retrieve that data in the notebook
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in pdf format
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in png format
 * `CatalogCreator_custom.py`: python script to create SQL query for the HSC database
