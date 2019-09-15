@@ -17,18 +17,18 @@ This repository contains all of the data and code needed to reproduce conclusion
 ### Contents of NonStationarity.ipynb:
 
 1. Collecting the data
-	1.1 Finding Ra/Dec coordinate of SDSS QSO
-	1.2 Querying HSC database
-	1.3 Constructing ``fake AGN'' sample
-	1.4 Querying HSC database for ``fake AGN''
-	1.5 Adding time-separation information
-		1.5.1 Finding patch information for each AGN
-		1.5.2 Finding out time difference between observations
+	1. Finding Ra/Dec coordinate of SDSS QSO
+	1. Querying HSC database
+	1. Constructing ``fake AGN'' sample
+	1. Querying HSC database for ``fake AGN''
+	1. Adding time-separation information
+		1. Finding patch information for each AGN
+		1. Finding out time difference between observations
 
 2. Analysis of the output from HSC for QSO selected in SDSS
-	2.1 Initial analysis
-	2.2 Median mass, luminosity and. Edd. Ratio
-	2.3 Time difference between observations
+	2. Initial analysis
+	2. Median mass, luminosity and. Edd. Ratio
+	2. Time difference between observations
 
 3. Analysis of the output from HSC for fake QSO selected in SDSS
 4. Figure 1 from the paper (redshift dependence)
