@@ -1,20 +1,20 @@
 # Nonstationarity of AGN variability
 
-#### work in progress
+#### !work in progress!
 
 This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way is down'' which is to be submitted to ApJL. The main file is `NonStationarity.ipynb` which contains all of the analysis.
 
-### Contents:
+## Contents of the repository:
 
 * Folder `Data`: contains all the data needed to reproduce the result. This included different AGN catalogs, filter curves and outputs from SQL queries.
-* Folder `Figures_pdf`: contains all of the figures from the paper and additional figure in pdf format
-* Folder `Figures_pdf`: contains all of the figures from the paper and additional figure in png format
+* Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in pdf format
+* Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in png format
 * `CatalogCreator_custom.py`: python script to create SQL query for the HSC database
 * `NonStationarity.ipynb`: main Jupiter notebook containing all of the routines
 * `NonStationarity.py`: module with useful functions for the analysis
 * `Nonstationarity_of_AGN_variability__ApJL.pdf`: current version of the manuscript
 
-### Contents of NonStationarity.ipynb:
+## Contents of NonStationarity.ipynb:
 
 1. Collecting the data
 	1. Finding Ra/Dec coordinate of SDSS QSO
