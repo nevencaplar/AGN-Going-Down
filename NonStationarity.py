@@ -582,7 +582,7 @@ def create_redshift_result(matched_array_filtered,number_of_objects_in_bin,sdss_
                    [res_delta_redshift_via_redshift_long_time_array,res_delta_redshift_via_redshift_median_long_time_array,res_delta_redshift_via_redshift_err_long_time_array,\
             res_delta_redshift_via_redshift_median_err_long_time_array,res_redshift_long_time_array,p20_long_time_array,p20_median_long_time_array,median_g_with_redshift_long_time_array]]
         
-def create_p20_values(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,res_delta_redshift_via_redshift_err_array_single):
+def create_p20_values(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,res_delta_redshift_via_redshift_err_array_single,time_result=False,print_res=False):
     """
     
     creates linear fit to the data
@@ -598,18 +598,81 @@ def create_p20_values(res_redshift_array_single,res_delta_redshift_via_redshift_
     -------
     returns 1st order polynomial for the mean, upper and lower limit
     """
+    poly_fit_order=1
     
+    p20, covar =np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,poly_fit_order,w=1/res_delta_redshift_via_redshift_err_array_single,cov=True)
+    p20_main=np.poly1d(p20)
+    #print(covar)
+    #sigma_p20 = np.sqrt(np.diagonal(covar))
+    #print(np.diagonal(covar))
+    #print(np.sqrt(np.diagonal(covar)))
+    #p20p=p20+sigma_p20
+    #p20m=p20-sigma_p20
     
+    # bootstraping to determine confidence region
+    list_of_p20=[]
+    for i in range(100):
+        p20=np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single+np.random.normal(0,res_delta_redshift_via_redshift_err_array_single),poly_fit_order)
+        list_of_p20.append(p20)
+
+    multi_fit_p20=[]   
+    for i in range(100):
+        multi_fit_p20.append(np.poly1d(list_of_p20[i])(res_redshift_array_single))
     
+    multi_fit_p20=np.array(multi_fit_p20) 
+    errors_confidence=np.std(multi_fit_p20,axis=0)/2
     
 
-    p20, covar =np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,1,w=1/res_delta_redshift_via_redshift_err_array_single,cov=True)
-    p20=np.poly1d(np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,1,w=1/res_delta_redshift_via_redshift_err_array_single))
-    sigma_p20 = np.sqrt(np.diagonal(covar))
-    p20p=p20+sigma_p20
-    p20m=p20-sigma_p20
+    # determining the redshift evolution of errors
+    p_redshift_evolution_of_errors=np.poly1d(np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_err_array_single,poly_fit_order))
+    errors_prediction=p_redshift_evolution_of_errors(res_redshift_array_single)
     
-    return p20,p20p,p20m       
+    
+    # fitting in time will work like this
+    #(a*xprime + b) /. xprime -> (time/(1 + x))
+    # b + (a time)/(1 + x) 
+    
+    # only works for first order fit
+    time_between_surveys=14.85
+    
+    p20_time, covar_time =np.polyfit(14.85/(1+res_redshift_array_single),res_delta_redshift_via_redshift_array_single,poly_fit_order,w=1/res_delta_redshift_via_redshift_err_array_single,cov=True)
+    p20_main_time_result=p20_time[1]+(p20_time[0]*time_between_surveys)/(1+res_redshift_array_single)
+    
+    if print_res==True:
+        print('redshift fit '+str(p20_main))
+        print('time fit '+str(np.poly1d(p20_time)))
+    
+    if time_result==False:
+        return p20_main(res_redshift_array_single),p20_main(res_redshift_array_single)+errors_confidence+errors_prediction,p20_main(res_redshift_array_single)-errors_confidence-errors_prediction      
+    if time_result==True:
+        return p20_main_time_result,p20_main_time_result+errors_confidence+errors_prediction,p20_main_time_result-errors_confidence-errors_prediction
+
+   
+    '''
+     #p20, covar =np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,poly_fit_order,w=1/res_delta_redshift_via_redshift_err_array_single,cov=True)
+ 
+    
+    p20_main=np.poly1d(np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single,poly_fit_order,w=1/res_delta_redshift_via_redshift_err_array_single))
+    #sigma_p20 = np.sqrt(np.diagonal(covar))
+    #p20p=p20+sigma_p20
+    #p20m=p20-sigma_p20
+    
+    list_of_p20=[]
+    for i in range(100):
+        p20=np.polyfit(res_redshift_array_single,res_delta_redshift_via_redshift_array_single+np.random.normal(0,res_delta_redshift_via_redshift_err_array_single),poly_fit_order)
+        list_of_p20.append(p20)
+
+    multi_fit_p20=[]   
+    for i in range(100):
+        multi_fit_p20.append(np.poly1d(list_of_p20[i])(res_redshift_array_single))
+    
+    multi_fit_p20=np.array(multi_fit_p20)  
+
+    print(np.std(multi_fit_p20,axis=0))
+    
+    return p20_main(res_redshift_array_single),p20_main(res_redshift_array_single)+np.std(multi_fit_p20,axis=0)/2,p20_main(res_redshift_array_single)-np.std(multi_fit_p20,axis=0)       
+    '''
+
 
 #### 
 # modeling below    

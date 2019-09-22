@@ -91,7 +91,7 @@ def main(
         raise StandardError("No data in user's catalog.")
 
     cols = user_catalog.dtype.names
-    #cols=["ra","dec"]
+    cols=["ra","dec"]
     quoted_cols = [quote_identifier("user."+col) for col in cols]
     cols_to_quoted = dict(itertools.izip(cols, quoted_cols))
 
