@@ -184,11 +184,11 @@ def create_redshift_result(matched_array_filtered,number_of_objects_in_bin,sdss_
     return_median_mag_values : bool
         if true return the mediam mag values of each bin?
     separate_in_time_dif : bool
-        ....
+        separate the result accoring to the time-separation between two measurments
     time_dif_array
-        ....
+        if separate_in_time_dif=True, supply array which contains information about time separation
     return_SDSS_ID :
-        ....
+        return SDSS ID of objects that go in each bin
       
     Results
     -------
@@ -251,18 +251,6 @@ def create_redshift_result(matched_array_filtered,number_of_objects_in_bin,sdss_
         # column with index 3 contains times
         delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_short_time=np.array(sort_and_split_in_quantiles(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split,3,5,True))[:,0]
         delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_long_time=np.array(sort_and_split_in_quantiles(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split,3,5,True))[:,-1]
-
-    ############################################################
-    # OLD code
-    # Divided in quantiles, in each quantile put number_of_objects_in_bin/5
-
-    #delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g=[]
-    #for i in range(len(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split)):
-    #    delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g.append(np.array_split(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split[i][np.argsort(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split[i][:,2])],
-    #                                                                                                int(len(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split[i])/(number_of_objects_in_bin/5))))
-    #
-    #delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g=np.array(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g)
-    ########################################################################
     
     # Divided in quantiles, in each quantile put number_of_objects_in_bin/5
     # array to sort, according to which column, into how many separations
@@ -336,9 +324,7 @@ def create_redshift_result(matched_array_filtered,number_of_objects_in_bin,sdss_
             median_g_with_redshift_60_80.append(np.median(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g[i][3][:,[2]]))
             median_g_with_redshift_80_100.append(np.median(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g[i][4][:,[2]]))
         if separate_in_time_dif==True:
-            
 
-            
             # same as when separate_in_time_dif==False
             delta_g_and_redshift_0_20.append(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g[i][0][:,[0,1]])
             delta_g_and_redshift_20_40.append(delta_g_and_redshift_and_g_sorted_by_redshift_g_and_split_sorted_by_g[i][1][:,[0,1]])
