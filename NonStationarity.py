@@ -8,6 +8,7 @@ www.ncaplar.com
 """
 
 import numpy as np
+import scipy
 from tqdm import tqdm
 
 def bootstrap_resample(X, n=None):
@@ -664,7 +665,7 @@ def create_p20_values(res_redshift_array_single,res_delta_redshift_via_redshift_
 # modeling below    
 
 
-def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,complete_return=False,run=2):
+def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,means_all_LC_redshift_fit,means_all_LC_redshift_values,complete_return=False,run=2):
 
     """return polynomial fit given frequency break, lamda*, lower slope and lower limit of Edd. ratio
     @param 
@@ -700,8 +701,8 @@ def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,complete_return=False,run=2):
     v_near=find_nearest(v_list,v)
     
     l_near=find_nearest(l_list,l)
-    print('l_near'+str(l))
-    print('l_near'+str(l_near))
+    #print('l_near'+str(l))
+    #print('l_near'+str(l_near))
 
     a_near=find_nearest(a_list,a)
     L_near=find_nearest(L_list,L)
@@ -792,7 +793,7 @@ def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,complete_return=False,run=2):
     
     selected_mean_values_near_par=np.array(selected_mean_values_near_par)
 
-    print('np.log10(selected_mean_values_near_par[:,1])'+str(np.log10(selected_mean_values_near_par[:,1])))
+    #print('np.log10(selected_mean_values_near_par[:,1])'+str(np.log10(selected_mean_values_near_par[:,1])))
     # Create coordinate pairs
     cartcoord = list(zip(np.log10(selected_mean_values_near_par[:,0]),\
                          np.log10(selected_mean_values_near_par[:,1]),\
@@ -808,8 +809,8 @@ def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,complete_return=False,run=2):
     values_5=selected_mean_values_near_par[:,10]
     values_6=selected_mean_values_near_par[:,11]
 
-    print(cartcoord)
-    print(values_0)
+    #print(cartcoord)
+    #print(values_0)
     #print(len(cartcoord))
     #print(len(values_0))
     
@@ -839,7 +840,7 @@ def create_interpolation_for_v_l_a_L_E(v,l,a,L,E,complete_return=False,run=2):
     redshift_points=np.array([3.51996875, 2.615975  , 1.85471711, 1.169585  , 0.74966532,
        0.39075962, 0.0847925 ])
 
-    print('interpolated_scipy_points '+str(interpolated_scipy_points))
+    #print('interpolated_scipy_points '+str(interpolated_scipy_points))
     z_interpolated=np.polyfit(redshift_points,interpolated_scipy_points,2)
     p_interpolated=np.poly1d(z_interpolated)
     
