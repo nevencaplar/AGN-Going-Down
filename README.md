@@ -24,17 +24,19 @@ This repository contains all of the data and code needed to reproduce conclusion
 	1. Adding time-separation information
 		1. Finding patch information for each AGN
 		1. Finding out time difference between observations
+
 2. Analysis of the output from HSC for QSO selected in SDSS
-	2. Initial analysis
-	2. Median mass, luminosity and. Edd. Ratio
-	2. Time difference between observations
+	1. Initial analysis
+	1. Median mass, luminosity and. Edd. Ratio
+	1. Time difference between observations
+
 3. Analysis of the output from HSC for control sample
 4. Analysis of the modeling results
 5. Figure 1 from the paper (redshift dependence)
 6. Figure 2 from the paper (filter and control sample)
 7. Figure 3 from the paper (brightness separation)
 8. Figure 4 from the paper (time separation)
-9. Figure 5 from the paper (modelling)
+9. Figure 5 from the paper (modeling)
 
 ## Contents of Data folder:
 
