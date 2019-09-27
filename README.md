@@ -42,8 +42,8 @@ This repository contains all of the data and code needed to reproduce conclusion
 
 File used or created in 'NonStationarity.ipynb'. Includes output from queries from catalog, intermediate and final results from the analysis. Find short description below and further description at appropriate places in 'NonStationarity.ipynb' where each of the files is used.
 
-* `194782.csv': HSC output, query all AGN from SDSS
-* `281732.csv': patch and tract for each AGN observed in HSC
+* `194782.csv`: HSC output, query all AGN from SDSS
+* `281732.csv`: patch and tract for each AGN observed in HSC
 * `281734.csv`: time when each patch and tract was observed in HSC
 * `318658.csv`: HSC output, query control sample
 * `BrowseTargets.8558.1569111088`: equatorial subsample from Million QSO catalog
