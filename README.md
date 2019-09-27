@@ -61,7 +61,7 @@ In the subfolder Modeling we placed result connected with simple modeling effort
 * Folder `Analysis_results`: summary of light curve behavior for one set of parameters (grid of 2401 parameter choices)
 * Folder `Code`: contains code to create summary from pure light curves
 * Folder `Individual_LC`: few examples of simulating light curves
-* `means_all_LC_redshift_fit.npy` and `means_all_LC_redshift_values.npy`: summarize redshift dependence, as in Figures 1,2,3,4 for each choice of parameters
+* `means_all_LC_redshift_fit.npy` and `means_all_LC_redshift_values.npy`: summarize redshift dependence, as in Figures 1,2,3 and 4, for each choice of parameters
 
 ## Contents of Figure folder:
 
