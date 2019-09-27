@@ -24,12 +24,10 @@ This repository contains all of the data and code needed to reproduce conclusion
 	1. Adding time-separation information
 		1. Finding patch information for each AGN
 		1. Finding out time difference between observations
-
 2. Analysis of the output from HSC for QSO selected in SDSS
 	2. Initial analysis
 	2. Median mass, luminosity and. Edd. Ratio
 	2. Time difference between observations
-
 3. Analysis of the output from HSC for control sample
 4. Analysis of the modeling results
 5. Figure 1 from the paper (redshift dependence)
@@ -76,7 +74,7 @@ Figures created in `NonStationarity.ipynb`. Find short description below and fur
 * `median_Edd`: median Eddington ratio for AGN from each brightness bin
 * `median_luminosity`: median luminosity for AGN from each brightness bin
 * `median_mass`: median mass for AGN from each brightness bin
-* `SDSS_HSC_coverage': comparison between SDSS and HSC positions of AGN
+* `SDSS_HSC_coverage`: comparison between SDSS and HSC positions of AGN
 
 
 ## Help:
