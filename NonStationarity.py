@@ -215,7 +215,7 @@ def create_redshift_result(matched_array_filtered,number_of_objects_in_bin,sdss_
     
     # array with has delta g as the first column, redshift as the second column
     delta_g_and_redshift=matched_array_filtered_with_g_mag_dif_and_err[:,[4,3]]
-    # array with has delta g as the first column, redshift as the second column, 3rd colum is the magnitude of the objects
+    # array with has delta g as the first column, redshift as the second column, 3rd colum is the magnitude of the objects in SDSS
     delta_g_and_redshift_and_g=matched_array_filtered_with_g_mag_dif_and_err[:,[4,3,6]]
     if return_SDSS_ID==True:
         # array with has delta g as the first column, redshift as the second column, 3rd column is the magnitude of the objects, 4th column is the SDSS ID for the objects
