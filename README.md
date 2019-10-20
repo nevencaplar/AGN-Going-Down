@@ -19,8 +19,8 @@ This repository contains all of the data and code needed to reproduce conclusion
 1. Collecting the data
 	1. Finding Ra/Dec coordinate of SDSS QSO
 	1. Querying HSC database
-	1. Constructing ``fake AGN'' sample
-	1. Querying HSC database for ``fake AGN''
+	1. Constructing ``fake AGN'' sample (control sample)
+	1. Querying HSC database for ``fake AGN''(control sample)
 	1. Adding time-separation information
 		1. Finding patch information for each AGN
 		1. Finding out time difference between observations
@@ -56,12 +56,12 @@ File used or created in 'NonStationarity.ipynb'. Includes output from queries fr
 * `Stripe82stars_likedr7_double_filtered`: Stripe82 stars with similar colors as AGN from DR7, after removing all AGN 
 * `time_difference_between_observations_in_g_band_SDSS_mean_HSC.npy`: time separation between observations in SDSS and HSC
 
-In the subfolder Modeling we placed result connected with simple modeling effort conducted in the manuscript.
+In the subfolder Modeling we placed results which are connected with simple modeling effort that is presented in the manuscript.
 
 * Folder `Analysis_results`: summary of light curve behavior for one set of parameters (grid of 2401 parameter choices)
 * Folder `Code`: contains code to create summary from pure light curves
-* Folder `Individual_LC`: few examples of simulating light curves
-* `means_all_LC_redshift_fit.npy` and `means_all_LC_redshift_values.npy`: summarize redshift dependence, as in Figures 1,2,3 and 4, for each choice of parameters
+* Folder `Individual_LC`: few examples of simulated light curves
+* `means_all_LC_redshift_fit.npy` and `means_all_LC_redshift_values.npy`: table which summarizes redshift dependence, as in Figures 1,2,3 and 4, for each choice of modeling parameters
 
 ## Contents of Figure folder:
 
@@ -76,8 +76,7 @@ Figures created in `NonStationarity.ipynb`. Find short description below and fur
 * `median_Edd`: median Eddington ratio for AGN from each brightness bin
 * `median_luminosity`: median luminosity for AGN from each brightness bin
 * `median_mass`: median mass for AGN from each brightness bin
-* `SDSS_HSC_coverage`: comparison between SDSS and HSC positions of AGN
-
+* `SDSS_HSC_coverage`: positions of the AGN found in SDSS and in HSC 
 
 ## Help:
 

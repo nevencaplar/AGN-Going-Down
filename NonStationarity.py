@@ -10,6 +10,7 @@ www.ncaplar.com
 import numpy as np
 import scipy
 from tqdm import tqdm
+from sklearn.metrics.pairwise import euclidean_distances
 
 def bootstrap_resample(X, n=None):
     """ 
