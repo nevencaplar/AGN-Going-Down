@@ -1,8 +1,8 @@
 # Nonstationarity of AGN variability
 
-#### !work in progress!
 
-This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way is down'' which is to be submitted to ApJL. The main file is `NonStationarity.ipynb` which contains all of the analysis.
+
+This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way to go is down!'' which is submitted to ApJL. The main file is `NonStationarity.ipynb` which contains all of the analysis.
 
 ## Contents of the repository:
 
