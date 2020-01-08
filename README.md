@@ -40,6 +40,12 @@ This repository contains all of the data and code needed to reproduce conclusion
 10. Fixed aperture check - Referee request
 	1. Gathering and sorting data
 	2. Reproduction of the analysis with the 3 arcsec aperture data
+11. No deblending (parent_id=0) check 
+	1. Creating query
+	2. Analysis of the result
+
+![Table_of_contents](https://www.dropbox.com/s/br3bggzpwepe38g/Table_of_contents.png?raw=1)
+
 
 ## Contents of Data folder:
 
@@ -49,6 +55,7 @@ File used or created in 'NonStationarity.ipynb'. Includes output from queries fr
 * `281732.csv`: patch and tract for each AGN observed in HSC
 * `281734.csv`: time when each patch and tract was observed in HSC
 * `318658.csv`: HSC output, query for the control sample
+* `332693.csv`: HSC output, deblending parent_id for each AGN
 * `BrowseTargets.8558.1569111088`: equatorial subsample from Million QSO catalog
 * `dmag_HSC_SDSS_AGN_quasar.fits`: filter differences as function of redshift between SDSS and HSC
 * `dr7qso.dat`: DR7 AGN catalog
@@ -79,6 +86,7 @@ In the subfolder Modeling we placed results which are connected with simple mode
 
 Figures created in `NonStationarity.ipynb`. Find short description below and further description at appropriate places in `NonStationarity.ipynb` where each of the files is created.
 
+* `comparison_isolated_random`: comparison for the sample of isolated AGN and the main sample
 * `comparison_SDSS_HSC_magnitudes`: comparison of SDSS and HSC magnitude for the AGN sample
 * `comparison_stars_AGN_color_color`: comparison of colors for AGN and stars selected to look like AGN
 * `comparison_stars_SDSS_HSC_magnitudes`: comparison of SDSS and HSC magnitude for the control sample
