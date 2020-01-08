@@ -2,7 +2,7 @@
 
 
 
-This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way to go is down!'' which is submitted to ApJL. The main file is `NonStationarity.ipynb` which contains all of the analysis.
+This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way to go is down!'' which is submitted to ApJL. The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of the analysis and instructions.
 
 ## Contents of the repository:
 
@@ -43,8 +43,6 @@ This repository contains all of the data and code needed to reproduce conclusion
 11. No deblending (parent_id=0) check 
 	1. Creating query
 	2. Analysis of the result
-
-![Table_of_contents](https://www.dropbox.com/s/br3bggzpwepe38g/Table_of_contents.png?raw=1)
 
 
 ## Contents of Data folder:
