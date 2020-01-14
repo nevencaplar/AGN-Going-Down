@@ -17,7 +17,9 @@ The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of 
 * `NonStationarity.py`: module with useful functions for the analysis
 * `Nonstationarity_of_AGN_variability__ApJL.pdf`: current (ArXiv) version of the manuscript
 
-## Contents of NonStationarity.ipynb:
+## Overview of NonStationarity.ipynb:
+
+In sections 1-3 we construct queries, record the outputs and then process and summarize the results from different sources. Outputs from these sections are numpy arrays that are then imported to create scientific figures in sections 5-9. Section 4 contains our theoretical modeling analysis, while sections 10 and 11 contain additional checks of our results. Each section can be run in standalone fashion, i.e., each section will only depend on the data that can be imported at the start of the section (Given that many sections depend on the same data, some arrays are loaded multiple times in the notebook).  <br><br/>
 
 1. Collecting the data
 	1. Finding Ra/Dec coordinate of SDSS QSO
