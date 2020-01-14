@@ -2,17 +2,18 @@
 
 
 
-This repository contains all of the data and code needed to reproduce conclusion from the paper "Nonstationarity of AGN variability - The only way to go is down!'' which is submitted to ApJL. The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of the analysis and instructions.
+This repository contains all of the data and code needed to reproduce the paper "Nonstationarity of AGN variability - The only way to go is down!'', accepted to ApJL.
+The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of the analysis and instructions. See the contents below for the overview of the files available.
 
 ## Contents of the repository:
 
-* Folder `Data`: contains all the data needed to reproduce all of results. This includes different AGN catalogs, filter curves and outputs from SQL queries. This allows you to run all of the analysis in the notebook without any external requests or queries. The only data missing is the catalog of non-variable stars from Stripe 82 - instructions are provided on how to retrieve that data in the notebook.
+* Folder `Data`: contains all the data needed to reproduce all of the results. This includes different input AGN catalogs, filter curves, and outputs from SQL queries. This allows you to run all of the analysis in the notebook without any external requests or queries. The only data missing is the catalog of non-variable stars from Stripe 82 - instructions are provided on how to retrieve that data in the notebook.
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in pdf format
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in png format
 * `CatalogCreator_custom.py`: python script to create SQL query for the HSC database
 * `NonStationarity.ipynb`: main Jupiter notebook containing all of the routines
 * `NonStationarity.py`: module with useful functions for the analysis
-* `Nonstationarity_of_AGN_variability__ApJL.pdf`: current version of the manuscript
+* `Nonstationarity_of_AGN_variability__ApJL.pdf`: ArXiv version of the manuscript
 
 ## Contents of NonStationarity.ipynb:
 
