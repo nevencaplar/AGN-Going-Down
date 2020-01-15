@@ -2,7 +2,7 @@
 
 
 
-This repository contains all of the data and code needed to reproduce the paper [Nonstationarity of AGN variability - The only way to go is down!](https://github.com/nevencaplar/Nonstationarity/blob/master/Nonstationarity_of_AGN_variability_ApJL.pdf), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. <br/>
+This repository contains all of the data and code needed to reproduce the paper [Nonstationarity of AGN variability - The only way to go is down!](https://github.com/nevencaplar/Nonstationarity/blob/master/Nonstationarity_of_AGN_variability_ApJL.pdf), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. 
 <br><br/>
 
 The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of the analysis and instructions. All of the figures generated in the notebook are available in separate folders. See the contents below for the full overview of the repository and, in particular, the overview of `NonStationarity.ipynb`.
