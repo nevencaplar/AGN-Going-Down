@@ -1,11 +1,11 @@
-# Observational Nonstationarity of AGN variability
+# Observational nonstationarity of AGN variability
 
 
 
-This repository contains all of the data and code needed to reproduce the paper [Nonstationarity of AGN variability - The only way to go is down!](https://github.com/nevencaplar/Nonstationarity/blob/master/Nonstationarity_of_AGN_variability_ApJL.pdf), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. 
+This repository contains all of the data and code needed to reproduce the paper [Observational nonstationarity of AGN variability - The only way to go is down!](https://github.com/nevencaplar/Nonstationarity/blob/master/Observational_Nonstationarity_of_AGN_variability_ApJL.pdf), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. 
 <br><br/>
 
-The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of the analysis and instructions. All of the figures generated in the notebook are available in separate folders. See the contents below for the full overview of the repository and, in particular, the overview of `NonStationarity.ipynb`.
+The main file is Jupyter notebook `AGN-Going-Down.ipynb` which contains all of the analysis and instructions. All of the figures generated in the notebook are available in separate folders. See the contents below for the full overview of the repository and, in particular, the overview of `AGN-Going-Down.ipynb`.
 
 ## Contents of the repository:
 
@@ -13,11 +13,11 @@ The main file is Jupyter notebook `NonStationarity.ipynb` which contains all of 
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in pdf format
 * Folder `Figures_pdf`: contains all of the figures from the paper and additional figures in png format
 * `CatalogCreator_custom.py`: python script to create SQL query for the HSC database
-* `NonStationarity.ipynb`: main Jupiter notebook containing all of the routines
+* `AGN-Going-Down.ipynb`: main Jupiter notebook containing all of the routines
 * `NonStationarity.py`: module with useful functions for the analysis
 * `Nonstationarity_of_AGN_variability__ApJL.pdf`: current (ArXiv) version of the manuscript
 
-## Overview of NonStationarity.ipynb:
+## Overview of AGN-Going-Down.ipynb:
 
 In sections 1-3 we construct queries, record the outputs and then process and summarize the results from different sources. Outputs from these sections are numpy arrays that are then imported to create scientific figures in sections 5-9. Section 4 contains our theoretical modeling analysis, while sections 10 and 11 contain additional checks of our results. Each section can be run in standalone fashion, i.e., each section will only depend on the data that can be imported at the start of the section (Given that many sections depend on the same data, some arrays are loaded multiple times in the notebook).  <br><br/>
 
