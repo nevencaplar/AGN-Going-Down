@@ -2,9 +2,10 @@
 
 
 
-This repository contains all of the data and code needed to reproduce the paper [Observational nonstationarity of AGN variability - The only way to go is down!](https://github.com/nevencaplar/Nonstationarity/blob/master/Observational_Nonstationarity_of_AGN_variability_ApJL.pdf), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. 
+This repository contains all of the data and code needed to reproduce the paper [Observational nonstationarity of AGN variability - The only way to go is down!](https://ui.adsabs.harvard.edu/abs/2020arXiv200104471C/abstract), by [N. Caplar](http://www.ncaplar.com/), [T. Pena](https://github.com/openhearted99), [S. Johnson](https://www.sdjohnson.org) and [J. Greene](https://crispygreene.wixsite.com/jenny), accepted to ApJL. 
 <br><br/>
-
+The continuing work in progress for this project is at [AGN-Going-Down-Extended](https://github.com/nevencaplar/AGN-Going-Down-Extended).
+<br><br/>
 The main file is Jupyter notebook `AGN-Going-Down.ipynb` which contains all of the analysis and instructions. All of the figures generated in the notebook are available in separate folders. See the contents below for the full overview of the repository and, in particular, the overview of `AGN-Going-Down.ipynb`.
 
 ## Contents of the repository:
